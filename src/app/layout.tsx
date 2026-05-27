@@ -2,6 +2,7 @@ import Script from 'next/script'
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from 'next/link'
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 import Logo from "./../../public/logo.png";
@@ -55,6 +56,7 @@ export default function RootLayout({
             Support
           </Link>
         </footer>
+        <Analytics />
         {process.env.NODE_ENV === "production" && (
           <Script src="https://microlens.app/events.js" data-site="5" defer />
         )}
